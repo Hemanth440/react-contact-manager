@@ -8,7 +8,9 @@ class ProductsCarousel extends React.Component {
 		
 		this.state = {
 			selectedCategories: []
-		};
+        };
+        
+        this.setCategories = this.setCategories.bind(this);
 	}
     
     setCategories(selectedCategories) {

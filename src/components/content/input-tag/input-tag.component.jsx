@@ -15,7 +15,7 @@ class InputTag extends React.Component {
     removeTag = (i) => {
       const newTags = [ ...this.state.tags ];
       newTags.splice(i, 1);
-      this.setState({ tags: newTags });
+      this.setState({ tags: newTags }, () => this.props.setCategories(this.state.tags));
     }
   
     inputKeyDown = (e) => {
